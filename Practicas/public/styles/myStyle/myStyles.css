@@ -1,0 +1,83 @@
+body{
+	padding: 10px;
+	margin-top: 15px;
+
+}
+
+.form_1{
+	width: 600px;
+	margin: auto;
+	background: rgba(0,0,0,0.1);
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-top: 20px;
+
+}
+
+
+.form_2{
+	width: 700px;
+	margin: auto;
+	background: rgba(0,0,0,0.1);
+	padding: 10px 20px;
+	box-sizing: border-box;
+	margin-top: 20px;
+
+}
+
+
+.alert_2{
+	width: 600px;
+	margin: auto;
+	
+}
+
+.alert_1{
+	margin: auto;
+	margin-top: 15px;
+	width: 600px;
+}
+
+h1{
+	color: #1fa67b;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0px;
+
+}
+
+h2{
+	margin-top: 25px;
+	margin-bottom: 10px;
+	font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    
+	
+}
+
+h3{
+	margin-top: 10px;
+	font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0px
+}
+
+.bntPesosDolares{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.span_2{
+	margin-right: 14em;
+}
+
+
+
+
+
+
+

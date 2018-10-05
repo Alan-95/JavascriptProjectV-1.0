@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Principal</title>
+
+	<link rel="stylesheet" type="text/css" href="public/styles/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="public/styles/myStyle/myStyles.css">
+
+</head>
+<body>
+	
+	<h1>Ejercicios de Javascript</h1>
+
+	<h2>Ejercicio 1: Escribir Texto y ponerlo en un Input</h2>
+	<div class="alert_2 alert alert-danger " id="ocultar" role="alert" style="display: none;">
+	  <span class="span_2 badge badge-info"><h4>Tiene que escribir un texto</h4></span>
+	  <input type="button" class="btn btn-info" value="Aceptar" onClick="botonAceptar()">
+	</div>
+
+	<form class="form_1">
+	  <div class="form-group">
+	    <label for="formGroupExampleInput2">Escribir: </label>
+    	<input type="text" class="form-control" id="txt_1" placeholder="Escriba en esta area" >
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="copiarTexto()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		  Lo que escribio es:
+		<span class="badge badge-info" id="res">Información</span> 
+	</div>
+
+
+
+
+
+
+	<h2>Ejercicio 2: Es mayor de edad si o no </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba su Nombre: </label>
+		<input type="text" class="form-control" id="txtNombre" placeholder="Escriba su Nombre completo">
+
+	    <label for="formGroupExampleInput2">Escriba la edad: </label>
+		<input type="text" class="form-control" id="txtEdad" placeholder="Escriba su Edad">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="edadNombre()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 Su nombre es:
+		<span class="badge badge-info" id="resNombre">-</span> 
+		 su edad es: 
+		<span class="badge badge-info" id="resEdad">-</span> 
+		y es:
+		<span class=" mayor badge badge-success" style="display: none;">Mayor de Edad</span> 
+		<span class="menor badge badge-danger" style="display: none;">Menor de Edad</span> 
+
+	</div>
+
+
+	<h2>Ejercicio 3: Pesos a Dolares </h2>
+	<form class="form_2">
+		<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label >Pesos:</label>
+		      <input type="text" class="form-control" id="txtPeso" placeholder="Escriba la cantidad en Pesos Mexicanos">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label >Dolares</label>
+		      <input type="text" class="form-control" id="txtDolar" placeholder="Escriba el valor del Dolar actual">
+		    </div>
+	  	</div>
+
+	  	<input type="button" class="bntPesosDolares btnInput btn btn-success" onClick="pesoDolar()" value="Enviar">
+	</form>
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		<span class="badge badge-info" id="resPeso">-</span> 
+		 pesos equivalen a 
+		<span class="badge badge-info" id="resDolar">-</span> 
+		dolares 
+	</div>
+
+
+
+	<h2>Ejercicio 4: Sacar el area de un Rectangulo </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba la base: </label>
+		<input type="text" class="form-control" id="txtBase" placeholder="Escriba la base del rectangulo">
+
+	    <label for="formGroupExampleInput2">Escriba la Altura: </label>
+		<input type="text" class="form-control" id="txtAltura" placeholder="Escriba la altura del rectangulo">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="baseAltura()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 El are del rectangulo es:
+		<span class="badge badge-info" id="resArea">-</span> 
+	</div>
+
+
+	<h2>Ejercicio 5: Sacar el perimetro de un Cuadrado </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba la longitud del cuadrado: </label>
+		<input type="text" class="form-control" id="txtLongitud" placeholder="Escriba la base del rectangulo">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="perimetro()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 El Perimetro del Cuadrado es:
+		<span class="badge badge-info" id="resPerimetro">-</span> 
+	</div>
+
+
+
+	<h2>Ejercicio 6: Sacar el volumen de un Esfera </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba el radio de la Esfera: </label>
+		<input type="text" class="form-control" id="txtRadio" placeholder="Escriba la base del rectangulo">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="esfera()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 El Volumen de la Esfera es:
+		<span class="badge badge-info" id="resEsfera">-</span> 
+	</div>
+
+
+
+	<h2>Ejercicio 7: Leer un valor y determinar si es mayor a 100 </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba el valor </label>
+		<input type="text" class="form-control" id="txtValor" placeholder="Escriba la base del rectangulo">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="valor()" value="Enviar">
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 El valor:
+		<span class="badge badge-info" id="resValor">-</span>
+		es  
+		<span class="valorMayor badge badge-success" style="display: none;">Mayor</span> 
+		<span class="valorMenor badge badge-danger" style="display: none;">Menor</span>
+	</div>
+
+	<h2>Ejercicio 8: Nombre y edad de 2 personas y imprimir quien mayor </h2>
+	<form class="form_2">
+		<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label >Nombre:</label>
+		      <input type="text" class="form-control" id="txtPrimerNombre" placeholder="Escriba el nombre de la primera persona">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label >Edad:</label>
+		      <input type="text" class="form-control" id="txtPrimerEdad" placeholder="Escriba la edad de la primer persona">
+		    </div>
+	  	</div>
+	  	<div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label >Nombre:</label>
+		      <input type="text" class="form-control" id="txtSegundaNombre" placeholder="Escriba el nombre de la segunda persona">
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label >Edad:</label>
+		      <input type="text" class="form-control" id="txtSegundaEdad" placeholder="Escriba la edad de la segunda persona">
+		    </div>
+	  	</div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="primerSegunda()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		<h6 class="argumento">La edad menor es: </h6>
+		<span class=" badge badge-info" id="resPrimeraSegunda">-</span>
+	</div>
+
+
+	<h2>Ejercicio 9: Leer 5 numeros obtener el promedio y determinar cual es el mas cercano </h2>
+	<form class="form_1">
+	  <div class="form-group col-md-5">
+	  	<label for="formGroupExampleInput2">Escriba los valores:</label>
+		<input type="text" class="form-control" id="txtNumero1" placeholder="Escriba el 1 numero">
+	  </div>
+
+	  <div class="form-group col-md-5">
+		<input type="text" class="form-control" id="txtNumero2" placeholder="Escriba el 2 numero">
+	  </div>
+
+	  <div class="form-group col-md-5">
+		<input type="text" class="form-control" id="txtNumero3" placeholder="Escriba el 3 numero">
+	  </div>
+
+	  <div class="form-group col-md-5">
+		<input type="text" class="form-control" id="txtNumero4" placeholder="Escriba el 4 numero">
+	  </div>
+
+	  <div class="form-group col-md-5">
+		<input type="text" class="form-control" id="txtNumero5" placeholder="Escriba el 5 numero">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="numeroPromedio()" value="Enviar">
+
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 El promedio es:
+		<span class="badge badge-info" id="resPromedio">-</span>
+		  
+		<span class="valorMayor badge badge-success" style="display: none;">Mayor</span> 
+		<span class="valorMenor badge badge-danger" style="display: none;">Menor</span>
+	</div>
+
+	<h2>Ejercicio 11: Sucesión de FIBONACCI </h2>
+	<form class="form_1">
+	  <div class="form-group">
+	  	<label for="formGroupExampleInput2">Escriba el numero maxino </label>
+		<input type="text" class="form-control" id="txtSucesion" placeholder="Escriba el valor numerico">
+	  </div>
+	  
+	  <input type="button" class="btnInput btn btn-success" onClick="sucesionFibonacci()" value="Enviar">
+	</form>
+
+	<div class="alert_1 alert alert-primary " id="mostrar" role="alert">
+		 La sucesión es:
+		<span class="badge badge-info" id="resSucesion">-</span>  
+		<span class="valorMayor badge badge-success" style="display: none;">Mayor</span> 
+		<span class="valorMenor badge badge-danger" style="display: none;">Menor</span>
+	</div>
+
+<script type="text/javascript" src="public/scripts/js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="public/scripts/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="public/scripts/js/popper.min.js"></script>
+<script src="public/scripts/myScripts/app.js"></script>
+
+</body>
+</html>
