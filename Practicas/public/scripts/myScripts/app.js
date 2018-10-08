@@ -183,17 +183,34 @@ function numeroPromedio(){
 
 function sucesionFibonacci(){
 	var num = parseInt(document.getElementById('txtSucesion').value);
-	var cont = 0;
-	var n = 0;
-	var x = 1;
+	document.getElementById('resNum').innerHTML = num;
+	var a = 0;
+	var b = 1;
+	var c = 0;
 
-	for(var i=1; i < num; i++) {
-		console.log("Esta en el siglo for");
-		if(i<=0){
-			cont = n + i;
-			console.log("posicion "+i+": "+cont);
+	for(var i=0; i < num; i++) {
+		//console.log("Esta en el siglo for");
+
+		if(i <= 0){
+			c = i + a;	// 0
+		}else if(0>=c){
+			c = a + b; // 1
+		}else{
+			c = a + b; // 1, 2, 3, 5, 8, 
+			a = b;
+			b = c;
 		}
+
+		console.log("En la posicion "+i+": "+c);
+
 	}
+
+	for (var i=0; i < num; i++) {
+		$('.muestraSucesion').show();
+		//document.getElementById().innerHTML = c;
+		document.getElementById('resSucesion').innerHTML = c;
+	}
+
 
 }
 
